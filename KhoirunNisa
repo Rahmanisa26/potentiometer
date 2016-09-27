@@ -1,0 +1,21 @@
+/*
+Blink
+Menyalakan LED pada pin 3 selama 4 detik dan Mematikannya selama 4 detik.
+
+Ini contoh programnya.
+*/
+
+int led = 3;//Output pada Digital Pin adalah sebuah LED yang terkoneksi/terhubung dengan Digital Pin 3.
+
+
+void setup() 
+{
+  pinMode(led, OUTPUT);// Mengatur Digital Pin sebagai Output.
+}
+
+void loop() {
+  digitalWrite(led, HIGH);   // mengatur LED agar menyala. 
+  delay(4000);               // tunggu sampai 4 detik.
+  digitalWrite(led, LOW);    // mengatur LED agar mati.
+  delay(4000);               // tunggu sampai 4 detik.
+}
