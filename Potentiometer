@@ -1,0 +1,18 @@
+int sensorPin = 0; 			// pin signal potentiometer dihubungkan ke port analog 0
+int ledPin = 7; 			// nomor pin LED internal Arduino
+int sensorValue = 0; 			// variable nilai awal yg dihasilkan sensor
+
+void setup()
+{
+pinMode(ledPin, OUTPUT);
+Serial.begin(9600); 			// untuk membaca data pada serial port di layar monitor
+}
+void loop()
+{
+sensorValue = analogRead(sensorPin); 	// membaca nilai dari sensor Analog
+Serial.println(sensorValue); 		// menulis nilai sensor di layar monitor
+digitalWrite(ledPin, HIGH); 
+delay(6000); 				// lamanya lampu On
+digitalWrite(ledPin, LOW);
+delay(3000);				// lamanya lampu Off
+}
